@@ -1,3 +1,5 @@
+<img src="https://image.flaticon.com/icons/png/512/2111/2111685.png" width="70px">
+
 https://developer.spotify.com/documentation/web-api/reference/#category-player
 
 ```json
