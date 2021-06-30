@@ -87,3 +87,5 @@ https://developer.spotify.com/documentation/web-api/
 ```
 <img src="https://i.imgur.com/431oGFu.png" width="400px">
 <img src="https://i.imgur.com/7aaKWcM.png" width="400px">
+
+The access tokens expire after 1 hour, which is set by Spotify's side and follows OAuth2 Guidelines.
