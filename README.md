@@ -7,7 +7,7 @@ Spotify Web API documentation : https://developer.spotify.com/documentation/web-
 ```py
 from spotify2py import get_artist
 
-source = get_artist(query="marshmello", token="BQCQ.........g49Y9t3Y")
+source = get_artist(artist_name="marshmello", token="BQCQ.........g49Y9t3Y")
 
 print(source)
 ```
