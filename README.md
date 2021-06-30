@@ -21,10 +21,10 @@ print(source)
 **use the code given below 👇,To generate a new Token.**
 
 ```py
-from spotify2py import token
+from spotify2py import get_token
 
 CLIENT_ID = '17a3.......90c20660f8'
 CLIENT_SECRET = '584d2ee.....07f8'
 
-print(token.get_token(CLIENT_ID, CLIENT_SECRET))
+print(get_token(CLIENT_ID, CLIENT_SECRET))
 ```
