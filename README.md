@@ -1,91 +1,28 @@
 <img src="https://image.flaticon.com/icons/png/512/2111/2111685.png" width="70px">
 
-https://developer.spotify.com/documentation/web-api/reference/#category-player
+Spotify Web API documentation : https://developer.spotify.com/documentation/web-api/
 
-https://developer.spotify.com/documentation/web-api/
+**use the Example code given below 👇,To get details about the artist.**
 
-```json
-{
-  "context": {
-    "external_urls" : {
-      "spotify" : "http://open.spotify.com/user/spotify/playlist/49znshcYJROspEqBoHg3Sv"
-    },
-    "href" : "https://api.spotify.com/v1/users/spotify/playlists/49znshcYJROspEqBoHg3Sv",
-    "type" : "playlist",
-    "uri" : "spotify:user:spotify:playlist:49znshcYJROspEqBoHg3Sv"
-  },
-  "timestamp": 1490252122574,
-  "progress_ms": 44272,
-  "is_playing": true,
-  "item": {
-    "album": {
-      "album_type": "album",
-      "external_urls": {
-        "spotify": "https://open.spotify.com/album/6TJmQnO44YE5BtTxH8pop1"
-      },
-      "href": "https://api.spotify.com/v1/albums/6TJmQnO44YE5BtTxH8pop1",
-      "id": "6TJmQnO44YE5BtTxH8pop1",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/8e13218039f81b000553e25522a7f0d7a0600f2e",
-          "width": 629
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/8c1e066b5d1045038437d92815d49987f519e44f",
-          "width": 295
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/d49268a8fc0768084f4750cf1647709e89a27172",
-          "width": 63
-        }
-      ],
-      "name": "Hot Fuss",
-      "type": "album",
-      "uri": "spotify:album:6TJmQnO44YE5BtTxH8pop1"
-    },
-    "artists": [
-      {
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0C0XlULifJtAgn6ZNCW2eu"
-        },
-        "href": "https://api.spotify.com/v1/artists/0C0XlULifJtAgn6ZNCW2eu",
-        "id": "0C0XlULifJtAgn6ZNCW2eu",
-        "name": "The Killers",
-        "type": "artist",
-        "uri": "spotify:artist:0C0XlULifJtAgn6ZNCW2eu"
-      }
-    ],
-    "available_markets": [
-      "AD",
-      "AR",
-  ...
-      "TW",
-      "UY"
-    ],
-    "disc_number": 1,
-    "duration_ms": 222075,
-    "explicit": false,
-    "external_ids": {
-      "isrc": "USIR20400274"
-    },
-    "external_urls": {
-      "spotify": "https://open.spotify.com/track/0eGsygTp906u18L0Oimnem"
-    },
-    "href": "https://api.spotify.com/v1/tracks/0eGsygTp906u18L0Oimnem",
-    "id": "0eGsygTp906u18L0Oimnem",
-    "name": "Mr. Brightside",
-    "popularity": 0,
-    "preview_url": "http://d318706lgtcm8e.cloudfront.net/mp3-preview/f454c8224828e21fa146af84916fd22cb89cedc6",
-    "track_number": 2,
-    "type": "track",
-    "uri": "spotify:track:0eGsygTp906u18L0Oimnem"
-  }
-}
+```py
+from spotify2py import get_artist
+
+source = get_artist(query="marshmello", token="BQCQ.........g49Y9t3Y")
+
+print(source)
 ```
-<img src="https://i.imgur.com/431oGFu.png" width="400px">
-<img src="https://i.imgur.com/7aaKWcM.png" width="400px">
 
-The access tokens expire after 1 hour, which is set by Spotify's side and follows OAuth2 Guidelines.
+**The access tokens expire after 1 hour, which is set by Spotify's side and follows OAuth2 Guidelines.**
+
+**But you can create a new token using CLIENT_ID & CLIENT_SECRET.**
+
+**use the code given below 👇,To generate a new Token.**
+
+```py
+from spotify2py import token
+
+CLIENT_ID = '17a3.......90c20660f8'
+CLIENT_SECRET = '584d2ee.....07f8'
+
+print(token.get_token(CLIENT_ID, CLIENT_SECRET))
+```
