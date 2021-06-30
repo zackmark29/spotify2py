@@ -83,3 +83,4 @@ https://developer.spotify.com/documentation/web-api/reference/#category-player
   }
 }
 ```
+<img src="https://i.imgur.com/431oGFu.png" width="200px">
