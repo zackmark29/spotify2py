@@ -12,6 +12,8 @@ source = get_artist(artist_name="marshmello", token="BQCQ.........g49Y9t3Y")
 print(source)
 ```
 
+<hr>
+
 **The access tokens expire after 1 hour, which is set by Spotify's side and follows OAuth2 Guidelines.**
 
 **But you can create a new token using CLIENT_ID & CLIENT_SECRET.**
