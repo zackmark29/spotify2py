@@ -2,6 +2,8 @@
 
 https://developer.spotify.com/documentation/web-api/reference/#category-player
 
+https://developer.spotify.com/documentation/web-api/
+
 ```json
 {
   "context": {
