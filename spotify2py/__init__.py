@@ -64,13 +64,23 @@ class Spotify():
                 return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
 
     def get_token(self, CLIENT_ID, CLIENT_SECRET):
-        return post("https://accounts.spotify.com/api/token",
-        {
-            'grant_type': 'client_credentials',
-            'client_id': CLIENT_ID,
-            'client_secret': CLIENT_SECRET,
-        }
-        ).json()['access_token']
+        try:
+            json_response = post("https://accounts.spotify.com/api/token",
+            {
+                'grant_type': 'client_credentials',
+                'client_id': CLIENT_ID,
+                'client_secret': CLIENT_SECRET,
+            }
+            ).json()
+
+            return json_response['access_token']
+        except TypeError as __error__:
+            return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
+        except Exception as __error__:
+            if f"{gethostbyname(gethostname())}" == "127.0.0.1":
+                return "You're Offline."
+            else:
+                return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
 
     def get_album(self, album_name):
         try:
