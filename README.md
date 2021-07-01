@@ -2,6 +2,8 @@
 
 Spotify Web API documentation : https://developer.spotify.com/documentation/web-api/
 
+Create a application : https://developer.spotify.com/dashboard/applications
+
 **use the Example code given below 👇,To get details about the artist.**
 
 ```py
