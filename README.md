@@ -98,6 +98,33 @@ print(var)
 
 <hr>
 
+### featured_playlist()
+- This function can be used to get meta data about featured playlist of your spotify account.
+
+- Use the function with **Spotify API Token**.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token").featured_playlist(show=0)
+
+print(var)
+```
+
+**Output of this program:**
+```
+{
+    'playlist_name': 'Easy On Saturday', 
+    'playlist_description': 'Lekker rustig aan doen op zaterdag met deze zachte pop liedjes.', 
+    'playlist_url': 'https://open.spotify.com/playlist/37i9dQZF1DX79N7YUDFu8f', 
+    'playlist_image': 'https://i.scdn.co/image/ab67706f00000003e62a57481e6aaeb533bea9b3'
+}
+```
+
+- Use the **show={}** method to check previous or next playlist, **limit = 10**.
+
+<hr>
+
 ### External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
 <br>
