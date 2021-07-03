@@ -40,7 +40,7 @@ var = Spotify(token="token").recently_played(show=0)
 print(var)
 ```
 
-- Use the **show={}** method to check previous track, **limit = 10**.
+- Use the **show={}** method to get previous track, **limit = 10**.
 
 <hr>
 
@@ -121,7 +121,7 @@ print(var)
 }
 ```
 
-- Use the **show={}** method to check previous or next playlist, **limit = 10**.
+- Use the **show={}** method to get previous or next playlist, **limit = 10**.
 
 <hr>
 
