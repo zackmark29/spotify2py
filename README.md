@@ -1,6 +1,6 @@
 <img src="https://image.flaticon.com/icons/png/512/2111/2111685.png" width="70px" align="right">
 
-# Spotify2py (under development Project)
+# Spotify2py
 
 ## Installation
 
