@@ -125,6 +125,64 @@ print(var)
 
 <hr>
 
+### user_profile()
+- This function can be used to get meta data about user's profile .
+
+- Use the function with **Spotify API Token** & **User ID.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token", user_id="user-id").user_profile()
+
+print(var)
+```
+
+<hr>
+
+### user_playlists()
+- This function can be used to get meta data about user's playlists.
+
+- Use the function with **Spotify API Token** & **User ID.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token", user_id="user-id").featured_playlist(show=0)
+
+print(var)
+```
+
+- Use the **show={}** method to get previous or next playlist, **limit = based on user's playlists count**.
+
+<hr>
+
+### new_releases()
+- This function can be used to get meta data about new releases albums.
+
+- Use the function with **Spotify API Token**.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token").new_releases(show=0)
+
+print(var)
+```
+
+**Output of this program:**
+```
+{
+    'album_name': 'Wasting Time ( feat. Drake )', 
+    'album_url': 'https://open.spotify.com/album/2brWccDLT5vREu0FxqH6Az', 
+    'album_image': 'https://i.scdn.co/image/ab67616d0000b2739b10373df0740a95838b7dd9'
+}
+```
+
+- Use the **show={}** method to get previous or next playlist, **limit = 10**.
+
+<hr>
+
 ## External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
 <br>
