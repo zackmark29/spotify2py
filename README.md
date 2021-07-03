@@ -25,6 +25,8 @@ var = Spotify().get_token(CLIENT_ID="your_CLIENT_ID", CLIENT_SECRET="your_CLIENT
 print(var)
 ```
 
+<hr>
+
 ### recently_played()
 - This function can be used list the recently played track names & track url.
 
@@ -39,6 +41,8 @@ print(var)
 ```
 
 - Use the **show={}** method to check previous track, **limit = 10**.
+
+<hr>
 
 ### get_artist()
 - This function can be used to get meta data about artists.
@@ -63,6 +67,36 @@ print(var)
     'artist_genres': 'electro house'
 }
 ```
+
+<hr>
+
+### get_album()
+- This function can be used to get meta data about album.
+
+- Use the function with **Spotify API Token** & **Album Name**.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token").get_album("shockwave")
+
+print(var)
+```
+
+**Output of this program:**
+```
+{
+    'album_name': 'Marshmello', 
+    'album_url': 'https://open.spotify.com/album/6yXPyhVxt3PHBwkinPFn6I', 
+    'total_tracks': 12, 
+    'album_image': 'https://i.scdn.co/image/ab67616d0000b273d82de295af2bbdc06fb14068', 
+    'artist_name': 'Shockwave', 
+    'album_release_date': '2021-06-11', 
+    'artist_url': 'https://open.spotify.com/artist/64KEffDW9EtZ1y2vBYgq8T'
+}
+```
+
+<hr>
 
 ### External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
