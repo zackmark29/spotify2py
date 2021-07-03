@@ -33,12 +33,12 @@ print(var)
 ```
 from spotify2py import Spotify
 
-var = Spotify(token="token").recently_played(0)
+var = Spotify(token="token").recently_played(show=0)
 
 print(var)
 ```
 
-- Use the **show={}** method to check previous track.**(limit = 10)**
+- Use the **show={}** method to check previous track, **limit = 10**.
 
 ### External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
