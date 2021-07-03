@@ -2,57 +2,43 @@
 
 ## Spotify2py (under development Project)
 
-### Overview of functions
+# Installation
 
-**Spotify2py** Python Package contains 9 functions.
+This library can be installed by the pip command, open your command prompt and type in the following command...
 
-- **get_token()**
- **get_token()** function 
+`pip install spotify2py`
 
-<table>
-  <tr>
-    <th>Functions</th>
-    <td>Status</td>
-  </tr>
-  <tr>
-    <th>recently_played()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>get_artist()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>get_token()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>get_album()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>featured_playlist()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>new_releases()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>user_playlists()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>user_profile()</th>
-    <td>pass</td>
-  </tr>
-  <tr>
-    <th>markets()</th>
-    <td>pass</td>
-  </tr>
-</table>
+# Overview of this library
 
-<hr>
+First import the library using the **import** method `from spotify2py import Spotify` and then proceed to call the functions
+
+### get_token()
+- This function can be used to generate spotify api token.
+
+- Use the function with Spotify **CLIENT_ID** & **CLIENT_SECRET** to generate a token.
+
+```
+from spotify2py import Spotify
+
+var = Spotify().get_token(CLIENT_ID="your_CLIENT_ID", CLIENT_SECRET="your_CLIENT_SECRET")
+
+print(var)
+```
+
+### recently_played()
+- This function can be used list the recently played track names & track url.
+
+- Use the function with **Spotify API Token**.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token").recently_played(0)
+
+print(var)
+```
+
+- Use the **show={}** method to check previous track.**(limit = 10)**
 
 ### External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
