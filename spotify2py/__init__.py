@@ -1,14 +1,16 @@
 from requests import get, post
 from socket import gethostbyname, gethostname
+from base64 import b64encode
 
 class Spotify():
-    def __init__(self, token):
+    def __init__(self, token=None, user_id=None):
         """
         Spotify2py
         ~~~~~~~~~~
         Create a Application: https://developer.spotify.com/dashboard/
         """
         self.token = token
+        self.user_id = user_id
 
     def recently_played(self, show=0):
         try:
@@ -65,15 +67,14 @@ class Spotify():
 
     def get_token(self, CLIENT_ID, CLIENT_SECRET):
         try:
-            json_response = post("https://accounts.spotify.com/api/token",
-            {
-                'grant_type': 'client_credentials',
-                'client_id': CLIENT_ID,
-                'client_secret': CLIENT_SECRET,
+            data = {
+                'grant_type': 'client_credentials'
             }
-            ).json()
-
-            return json_response['access_token']
+            header = {
+                'Authorization' : 'Basic {}'.format(b64encode(str(f"{CLIENT_ID}:{CLIENT_SECRET}").encode()).decode())
+            }
+            source = post("https://accounts.spotify.com/api/token", data=data, headers=header).json()
+            return source['access_token']
         except TypeError as __error__:
             return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
         except Exception as __error__:
@@ -94,9 +95,13 @@ class Spotify():
             source = json_response['albums']['items'][0]
 
             return dict(
-                album_name = source['name'], 
+                album_name = source['artists'][0]['name'], 
                 album_url = source['external_urls']['spotify'], 
-                album_image = source['images'][0]['url']
+                total_tracks = source['total_tracks'],
+                album_image = source['images'][0]['url'],
+                artist_name = source['name'],
+                album_release_date = source['release_date'],
+                artist_url = source['artists'][0]['external_urls']['spotify']
             )    
         except KeyError:
             return f"401 Error : {json_response['error']['message']}"
@@ -161,9 +166,9 @@ class Spotify():
             else:
                 return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
 
-    def user_playlists(self, user_id, show=0):
+    def user_playlists(self, show=0):
         try:
-            json_response = get(f"https://api.spotify.com/v1/users/{user_id}/playlists", 
+            json_response = get(f"https://api.spotify.com/v1/users/{self.user_id}/playlists", 
             headers={
                 "Content-Type":"application/json",
                 "Authorization":f"Bearer {self.token}"
@@ -181,6 +186,52 @@ class Spotify():
             )    
         except KeyError:
             return f"401 Error : {json_response['error']['message']}"
+        except TypeError as __error__:
+            return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
+        except Exception as __error__:
+            if f"{gethostbyname(gethostname())}" == "127.0.0.1":
+                return "You're Offline."
+            else:
+                return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
+
+    def user_profile(self):
+        try:
+            json_response = get(f"https://api.spotify.com/v1/users/{self.user_id}", 
+            headers={
+                "Content-Type":"application/json",
+                "Authorization":f"Bearer {self.token}"
+                }
+            ).json()
+            
+            source = json_response
+
+            return dict(
+                user_name = source['display_name'],
+                user_followers = source['followers']['total'], 
+                user_profile_url = source['external_urls']['spotify'], 
+                playlist_image = source['images'][0]['url'],
+            )    
+        except KeyError:
+            return f"401 Error : {json_response['error']['message']}"
+        except TypeError as __error__:
+            return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
+        except Exception as __error__:
+            if f"{gethostbyname(gethostname())}" == "127.0.0.1":
+                return "You're Offline."
+            else:
+                return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
+
+    def markets(self):
+        try:
+            json_response = get("https://api.spotify.com/v1/markets", 
+            headers={
+                "Content-Type":"application/json",
+                "Authorization":f"Bearer {self.token}"
+                }
+            ).json()
+            
+            return json_response['markets']
+
         except TypeError as __error__:
             return f"Please Report the issue to developer, 'Error : {__error__}' on 'https://github.com/sijey-praveen/spotify2py/issues'"
         except Exception as __error__:
