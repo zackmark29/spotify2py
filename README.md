@@ -125,10 +125,10 @@ print(var)
 
 <hr>
 
-### External Links:
+## External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
 <br>
 <a href="https://developer.spotify.com/dashboard/applications">Create a application</a>
 <br>
-<a href="https://developer.spotify.com/console/">Console</a>
+<a href="https://developer.spotify.com/console/">Spotify Web API Console</a>
 
