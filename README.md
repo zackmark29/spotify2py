@@ -183,6 +183,48 @@ print(var)
 
 <hr>
 
+### get_track()
+- This function can be used to get meta data about track's.
+
+- Use the function with **Spotify API Token** & **Track Name**.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token").get_track("faded")
+
+print(var)
+```
+
+**Output of this program:**
+```
+{
+    'artist_name': 'Alan Walker', 
+    'artist_url': 'https://open.spotify.com/artist/7vk5e3vY1uw9plTHJAMwjN', 
+    'track_image': 'https://i.scdn.co/image/ab67616d0000b273c4d00cac55ae1b4598c9bc90', 
+    'track_url': 'https://open.spotify.com/track/7gHs73wELdeycvS48JfIos', 
+    'track_name': 'Faded', 
+    'track_release_date': '2015-12-04'
+}
+```
+
+<hr>
+
+### play()
+- This function can be used to play tracks on spotify web .
+
+- Use the function with **Spotify API Token** & **Track Name**.
+
+```
+from spotify2py import Spotify
+
+var = Spotify(token="token", user_id="user-id").play("alone marshmello")
+
+print(var)
+```
+
+<hr>
+
 ## External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
 <br>
