@@ -14,8 +14,6 @@ and open terminal in the same downloaded path, Use the command given below to in
 
 This library can be installed by the pip command, open your command prompt and type in the following command...
 
-`pip install spotify2py`
-
 ## Overview of this library
 
 First import the library using the **import** method `from spotify2py import Spotify` and then proceed to call the functions
