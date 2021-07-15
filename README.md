@@ -14,9 +14,6 @@
 
 This library can be installed by the pip command, open your command prompt and type in the following command...
 
-## Docs 
-<a href="https://github.com/sijey-praveen/spotify2py/wiki">Click here to read the docs.</a>
-
 ## External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
 <br>
