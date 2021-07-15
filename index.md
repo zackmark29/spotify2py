@@ -4,7 +4,7 @@
 
 ## Overview of this library
 
-First import the library using the **import** method `from spotify2py import Spotify` and then proceed to call the functions
+First import the library using the **import** method **from spotify2py import Spotify** and then proceed to call the functions
 
 ### get_token()
 - This function can be used to generate spotify api token.
