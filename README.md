@@ -14,8 +14,6 @@
 
 This library can be installed by the pip command, open your command prompt and type in the following command...
 
-<img src="https://image.flaticon.com/icons/png/512/2111/2111685.png" width="70px" align="right">
-
 ## Overview of this library
 
 First import the library using the **import** method `from spotify2py import Spotify` and then proceed to call the functions
