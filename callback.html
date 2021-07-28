@@ -13,7 +13,7 @@
     <script>
         
         function Token(){
-            const urlParams = new URLSearchParams(window.location.href.replace("#", "?"));
+            const urlParams = new URLSearchParams(window.location.href.replace("#", "?t=t&"));
             const token = urlParams.get('access_token');
             document.write(token);
         }
