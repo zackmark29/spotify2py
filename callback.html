@@ -12,11 +12,11 @@
     <meta property="og:image" content="https://image.flaticon.com/icons/png/512/2111/2111685.png" />
     <script>
         
-        function AuthorizationCode(){
+        function Token(){
             const str = window.location.href.replace("#", "?")
             const urlParams = new URLSearchParams(str);
-            code = urlParams.get('access_token')
-            document.write(code);
+            code = urlParams.get('access_token');
+            console.log(code);
         }
 
     </script>
@@ -47,7 +47,7 @@
 <body>
 
     <center>
-        <input type="button" value="Get Authorization Code" onclick="AuthorizationCode();" />
+        <input type="button" value="Get Token" onclick="Token();" />
     </center>
 
 </body>
