@@ -17,7 +17,7 @@
             const queryString = window.location.search;
             if ( queryString.length > 0 ){
                 const urlParams = new URLSearchParams(queryString);
-                code = urlParams.get('code')
+                code = urlParams.get('access_token')
             }
             document.write(code);
         }
