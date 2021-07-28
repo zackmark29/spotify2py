@@ -15,7 +15,7 @@
         function Token(){
             const str = window.location.href.replace("#", "?")
             const urlParams = new URLSearchParams(str);
-            code = urlParams.get('access_token');
+            const code = urlParams.get('access_token');
             console.log(code);
         }
 
