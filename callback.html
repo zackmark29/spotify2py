@@ -1,0 +1,15 @@
+<script>
+    function getCode(){
+        let code = null;
+        const queryString = window.location.search;
+        if ( queryString.length > 0 ){
+            const urlParams = new URLSearchParams(queryString);
+            code = urlParams.get('code')
+        }
+        document.write(code);
+    }
+</script>
+
+<center>
+    <input type="button" value="Get Authorization Code" onclick="getCode();" />
+</center>
