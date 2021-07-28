@@ -14,13 +14,10 @@
         
         function AuthorizationCode(){
             let code = "You're Not added this site as your Spotify callback URL, Please add it and try again!";
-            const queryString = window.location.search;
-            if ( queryString.length > 0 ){
-                const urlParams = new URLSearchParams(queryString);
-                code = urlParams.get('access_token')
-            }
             let str = window.location.href.replace("#", "?")
-            document.write(str);
+            const urlParams = new URLSearchParams(str);
+            code = urlParams.get('access_token')
+            document.write(code);
         }
     </script>
 
