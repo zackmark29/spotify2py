@@ -11,15 +11,20 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
     <meta property="og:image" content="https://image.flaticon.com/icons/png/512/2111/2111685.png" />
     <script>
-        
+
+        function access_token() {
+            let str = window.location.href.replace("#", "?")
+            return str
+        }
+
         function AuthorizationCode(){
             let code = "You're Not added this site as your Spotify callback URL, Please add it and try again!";
-            const queryString = window.location.search;
+            const queryString = access_token;
             if ( queryString.length > 0 ){
                 const urlParams = new URLSearchParams(queryString);
                 code = urlParams.get('access_token')
             }
-            document.write(window.location.href);
+            document.write(code);
         }
     </script>
 
