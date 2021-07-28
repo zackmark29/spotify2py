@@ -14,7 +14,7 @@
         
         function AuthorizationCode(){
             let code = "You're Not added this site as your Spotify callback URL, Please add it and try again!";
-            let str = window.location.href.replace("#", "?")
+            const str = window.location.href.replace("#", "?")
             const urlParams = new URLSearchParams(str);
             code = urlParams.get('access_token')
             document.write(code);
