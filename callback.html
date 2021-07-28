@@ -11,8 +11,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
     
     <script>
+        
+        function Exception(){
+            alert("You're Not added this site as your Spotify callback URL, Please add it and try again!")
+        }
+
         function AuthorizationCode(){
-            let code = alert("You're Not added this site as your Spotify callback URL, Please add it and try again!");
+            let code = Exception();
             const queryString = window.location.search;
             if ( queryString.length > 0 ){
                 const urlParams = new URLSearchParams(queryString);
