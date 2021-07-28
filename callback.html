@@ -12,12 +12,8 @@
     <meta property="og:image" content="https://image.flaticon.com/icons/png/512/2111/2111685.png" />
     <script>
         
-        function Exception(){
-            alert("You're Not added this site as your Spotify callback URL, Please add it and try again!")
-        }
-
         function AuthorizationCode(){
-            let code = Exception();
+            let code = "You're Not added this site as your Spotify callback URL, Please add it and try again!";
             const queryString = window.location.search;
             if ( queryString.length > 0 ){
                 const urlParams = new URLSearchParams(queryString);
@@ -42,8 +38,8 @@
             font-size: 18px;
             height: 55px;
             width: 300px;
-            margin-top: 320px;
-            margin-bottom: 320px;
+            margin-top: 330px;
+            margin-bottom: 330px;
         }
 
     </style>
@@ -54,7 +50,6 @@
 
     <center>
         <input type="button" value="Get Authorization Code" onclick="AuthorizationCode();" />
-        <p style="color: white; font-family : sans-serif; font-size: 14px;">Copyright (c) 2021 Sijey</p>
     </center>
 
 </body>
