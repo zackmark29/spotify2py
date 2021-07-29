@@ -10,14 +10,7 @@
     <meta property="og:description" content="Spotify2py is a easy to use, feature-rich python wrapper for the Spotify Web API.">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
     <meta property="og:image" content="https://image.flaticon.com/icons/png/512/2111/2111685.png" />
-    <script>
-        
-        function Token(){
-            const token = new URLSearchParams(window.location.href.replace("#", "&")).get('access_token');
-            document.write(token);
-        }
-
-    </script>
+    <script src="token.js"></script>
 
     <style>
 
@@ -36,6 +29,12 @@
             width: 300px;
             margin-top: 330px;
             margin-bottom: 330px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        input:hover {
+        box-shadow: 0 0 7px #1ed760, 0 0 7px #1ed760, 0 0 14px #1ed760;
         }
 
     </style>
