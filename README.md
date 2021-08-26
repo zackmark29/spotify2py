@@ -231,7 +231,6 @@ print(var)
 
 <hr>
 
-"""
 ## Authorization Scopes
 
 ```
@@ -243,7 +242,6 @@ Library : user-library-modify, user-library-read
 Listening History : user-read-playback-position, user-read-recently-played, user-top-read Playback, app-remote-control streaming
 Follow : user-follow-modify, user-follow-read
 ```
-"""
 
 ## External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
