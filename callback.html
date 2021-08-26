@@ -5,8 +5,9 @@
         if (token === null) {
             document.write('<p style="color: whitesmoke;">Add this site as your spotify application callback url to continue.</p>')
         } else {
-            navigator.clipboard.writeText(token)
-            document.write('<p style="color: whitesmoke;">Authorization Token Copied to clipboard, You can close this site now!</p>')
+            var _return = `{'access_token' : '${token}'}`
+            navigator.clipboard.writeText(_return)
+            document.write('<p style="color: whitesmoke;">Authorization completed successfully, You can close this site now!</p>')
         }
     </script>
 </body>
