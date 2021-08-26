@@ -4,6 +4,7 @@
         document.write("Add this site as your spotify application callback url to continue.")
     } else {
         navigator.clipboard.writeText(`spotify2pyaccesst0kencallbackvalue ${token}`)
+        console.log(token)
         alert("Authorization completed successfully")
         window.close()
     }
