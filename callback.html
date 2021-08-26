@@ -1,52 +1,14 @@
 <html lang="en">
 
-<head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Spotify2py</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta property="og:title" content="Spotify2py Callback">
-    <meta property="og:description" content="Spotify2py is a easy to use, feature-rich python wrapper for the Spotify Web API.">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"/>
-    <meta property="og:image" content="https://image.flaticon.com/icons/png/512/2111/2111685.png" />
-    <script src="assets/js/token.js"></script>
-
-    <style>
-
-        body {
-            background-color: #121212;
+<body style="background-color: #121212;"><script>
+        var token = new URLSearchParams(window.location.href.replace("#", "?&")).get('access_token')
+        if (token === null) {
+            document.write('<p style="color: whitesmoke;">Add this site as your spotify application callback url to continue.</p>')
+        } else {
+            navigator.clipboard.writeText(token)
+            document.write('<p style="color: whitesmoke;">Authorization Token Copied to clipboard, You can close this site now!</p>')
         }
-
-        input {
-            background-color:#1ed760;
-            border-radius: 25px;
-            border: none;
-            color: white;
-            font-family: Arial;
-            font-size: 18px;
-            height: 55px;
-            width: 300px;
-            margin-top: 330px;
-            margin-bottom: 330px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        input:hover {
-        box-shadow: 0 0 7px #1ed760, 0 0 7px #1ed760, 0 0 14px #1ed760;
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-    <center>
-        <input type="button" value="Get Token" onclick="Token();" />
-    </center>
-
+    </script>
 </body>
 
 <html>
