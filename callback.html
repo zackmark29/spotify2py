@@ -1,15 +1,10 @@
-<html lang="en">
-
-<body style="background-color: #121212;"><script>
-        var token = new URLSearchParams(window.location.href.replace("#", "?&")).get('access_token')
-        if (token === null) {
-            document.write("Add this site as your spotify application callback url to continue.")
-        } else {
-            navigator.clipboard.writeText(`spotify2pyaccesst0kencallbackvalue ${token}`)
-            alert("Authorization completed successfully")
-            window.close()
-        }
-    </script>
-</body>
-
-<html>
+<script>
+    var token = new URLSearchParams(window.location.href.replace("#", "?&")).get('access_token')
+    if (token === null) {
+        document.write("Add this site as your spotify application callback url to continue.")
+    } else {
+        navigator.clipboard.writeText(`spotify2pyaccesst0kencallbackvalue ${token}`)
+        alert("Authorization completed successfully")
+        window.close()
+    }
+</script>
