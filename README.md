@@ -231,8 +231,24 @@ print(var)
 
 <hr>
 
+"""
+## Authorization Scopes
+
+```
+Images : ugc-image-upload
+Playlists : playlist-modify-private, playlist-read-private, playlist-modify-public, playlist-read-collaborative
+Users : user-read-private, user-read-email 
+Spotify Connect : user-read-playback-state, user-modify-playback-state, user-read-currently-playing
+Library : user-library-modify, user-library-read
+Listening History : user-read-playback-position, user-read-recently-played, user-top-read Playback, app-remote-control streaming
+Follow : user-follow-modify, user-follow-read
+```
+"""
+
 ## External Links:
 <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API documentation</a>
+<br>
+<a href="https://developer.spotify.com/dashboard/applications">Create a application</a>
 <br>
 <a href="https://developer.spotify.com/console/">Spotify Web API Console</a>
 
